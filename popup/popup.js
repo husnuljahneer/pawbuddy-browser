@@ -10,22 +10,23 @@ document.addEventListener("DOMContentLoaded", function () {
         (tabs) => {
           var currentTab = tabs.filter((tab) => tab.active)[0];
           chrome.tabs.update(tab.id, { active: true });
-          function changeBackgroundColor() {
+          function appendImage() {
             let img = document.createElement("img");
             img.draggable = false;
             img.position = "absolute";
-            img.style.top = "200px";
-            img.style.left = "400px";
+            img.style.position = "absolute";
+            img.style.top = "100px";
+            img.style.left = "40%";
+            img.style.zIndex = "99";
             img.width = 150;
             img.height = 150;
             img.src = "https://jahneer.me/petpets/pets/bat.gif";
-            img.style.position = "absolute";
             document.body.appendChild(img);
           }
           chrome.scripting.executeScript(
             {
               target: { tabId: tab.id },
-              func: changeBackgroundColor
+              func: appendImage
             },
             (injectionResults) => {
               console.log("done", injectionResults);
@@ -49,22 +50,23 @@ document.addEventListener("DOMContentLoaded", function () {
           var currentTab = tabs.filter((tab) => tab.active)[0];
 
           chrome.tabs.update(tab.id, { active: true });
-          function changeBackgroundColor() {
+          function appendImage() {
             let img = document.createElement("img");
             img.draggable = false;
             img.position = "absolute";
-            img.style.top = "200px";
-            img.style.left = "400px";
+            img.style.position = "absolute";
+            img.style.top = "100px";
+            img.style.left = "40%";
+            img.style.zIndex = "99";
             img.width = 150;
             img.height = 150;
             img.src = "https://jahneer.me/petpets/pets/crocs.gif";
-            img.style.position = "absolute";
             document.body.appendChild(img);
           }
           chrome.scripting.executeScript(
             {
               target: { tabId: tab.id },
-              func: changeBackgroundColor
+              func: appendImage
             },
             (injectionResults) => {
               console.log("done", injectionResults);
