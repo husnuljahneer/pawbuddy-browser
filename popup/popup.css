@@ -3,8 +3,9 @@ body {
 }
 
 .container {
+    padding: 20px;
     text-align: center;
-    width: 500px;
+    width: 300px;
     margin-top: 30px;
     font-family: 'Poppins', sans-serif;
 }
@@ -13,14 +14,21 @@ body {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 5px 35px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
 }
+.button_primary:hover {
+    background-color: #131513;
+}
 
 .img_style {
-    width: 60%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
+}
+
+.custom_font{
+    font-size: 10px;
 }

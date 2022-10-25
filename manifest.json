@@ -2,11 +2,16 @@
     "manifest_version": 3,
     "name": "Pawbuddy",
     "description": "Pawbuddy is a Chrome extension that provides virtual pet care for your browser.",
-    "version": "0.0.5",
+    "version": "1.0.6",
     "options_page": "settings/settings.html",
     "action": {
         "default_title": "Pawbuddy",
         "default_popup": "popup/popup.html"
+    },
+    "icons": {
+        "16": "/logo/logo-16.png",
+        "48": "/logo/logo-16.png",
+        "128": "/logo/logo-16.png"
     },
     "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
     "host_permissions": [
