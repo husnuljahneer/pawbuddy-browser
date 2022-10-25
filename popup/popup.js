@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
             img.position = "absolute";
             img.style.top = "200px";
             img.style.left = "400px";
-            img.width = 100;
-            img.height = 100;
+            img.width = 150;
+            img.height = 150;
             img.src = "https://jahneer.me/petpets/pets/bat.gif";
             img.style.position = "absolute";
             document.body.appendChild(img);
@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
             img.position = "absolute";
             img.style.top = "200px";
             img.style.left = "400px";
-            img.width = 100;
-            img.height = 100;
+            img.width = 150;
+            img.height = 150;
             img.src = "https://jahneer.me/petpets/pets/crocs.gif";
             img.style.position = "absolute";
             document.body.appendChild(img);
