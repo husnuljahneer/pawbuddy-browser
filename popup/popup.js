@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
               let left = 0;
               let speed = 1;
               let top = 100;
+
               setTimeout(() => {
-                //stop moving the pet on mouseover
                 img.addEventListener("mouseover", () => {
                   // move the opposite direction
                   speed = -speed;
