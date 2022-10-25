@@ -63,7 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
               let speed = 1;
               let top = 100;
               setTimeout(() => {
-                let interval = setInterval(() => {
+                //stop moving the pet on mouseover
+                img.addEventListener("mouseover", () => {
+                  // move the opposite direction
+                  speed = -speed;
+                });
+                setInterval(() => {
                   if (left >= 100) {
                     speed = -1;
                   } else if (left <= 0) {
@@ -82,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
               let left = 0;
               let speed = 1;
               setTimeout(() => {
-                let interval = setInterval(() => {
+                setInterval(() => {
                   if (left >= 100) {
                     speed = -1;
                   } else if (left <= 0) {
