@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const batButton = document.getElementById("bat_button");
   batButton.addEventListener("click", function () {
+    document.getElementById("move_the_pets").disabled = false;
     getCurrentTab();
     async function getCurrentTab() {
       let queryOptions = { active: true, lastFocusedWindow: true };
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const moveThePetButton = document.getElementById("move_the_pets");
   moveThePetButton.addEventListener("click", function () {
+    // document.getElementById("move_the_pets").disabled = false;
     getCurrentTab();
     async function getCurrentTab() {
       let queryOptions = { active: true, lastFocusedWindow: true };
@@ -57,7 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
           chrome.tabs.update(tab.id, { active: true });
           function moveThePet() {
             if (document.getElementById("bat_image")) {
+              flagOn = true;
               let img = document.getElementById("bat_image");
+
               img.style.top = "100px";
               let left = 0;
               let speed = 1;
@@ -113,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             (injectionResults) => {
               console.log("done", injectionResults);
+              document.getElementById("move_the_pets").disabled = true;
             }
           );
         }
@@ -123,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const clearButton = document.getElementById("clear_button");
   clearButton.addEventListener("click", function () {
+    document.getElementById("move_the_pets").disabled = false;
     getCurrentTab();
     async function getCurrentTab() {
       let queryOptions = { active: true, lastFocusedWindow: true };
@@ -157,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const crocsButton = document.getElementById("crocs_button");
   crocsButton.addEventListener("click", function () {
+    document.getElementById("move_the_pets").disabled = false;
     getCurrentTab();
     async function getCurrentTab() {
       let queryOptions = { active: true, lastFocusedWindow: true };
